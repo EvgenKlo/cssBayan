@@ -29,7 +29,6 @@ label {
     border-radius: 10px;
     max-width: 720px;
     margin: 20px auto;
-    transition: all .2s linear;
 }
 
 .accordion__content {
