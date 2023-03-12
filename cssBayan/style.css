@@ -53,7 +53,8 @@ label {
 .image {
     display: flex;
     margin: 0 auto;
-    height: 0;
+    max-width: 0;
+    max-height: 0;
     transition: .5s;
 }
 
@@ -79,7 +80,6 @@ label {
     padding: 0;
     margin-top: -2rem;
     transition: .5s;
-    opacity: 0;
 }
 
 .accordion-item__input {
@@ -110,7 +110,8 @@ label {
 
 .accordion-item__input:checked ~ .accordion__content
 >.image {
-    height: 34rem;
+    max-height: 70%;
+    max-width: 70%;
     margin: 0 auto 2rem;
     transition: .5s;
 }
@@ -122,9 +123,6 @@ label {
     }
     .container {
         max-width: 72rem;
-    }
-    .sign {
-        opacity: 1;
     }
     .accordion__trigger {
         font-size: 1.8rem;
@@ -149,18 +147,6 @@ label {
     .sign {
         margin-top: -1.4rem;
     }
-    .accordion-item__input:checked ~ .accordion__content {
-        display: flex;
-        height: 27rem;
-    }
-    .accordion-item__input:checked ~ .accordion__content
-    >.image {
-        height: 25rem;
-        margin: 0 auto 2rem;
-    }
-    .sign {
-        opacity: 1;
-    }
 }
 
 @media (max-width: 320px)  {
@@ -179,18 +165,6 @@ label {
     }
     .sign {
         margin-top: -1.4rem;
-    }
-    .accordion-item__input:checked ~ .accordion__content {
-        display: flex;
-        height: 27rem;
-    }
-    .accordion-item__input:checked ~ .accordion__content
-    >.image {
-        height: 25rem;
-        margin: 0 auto 2rem;
-    }
-    .sign {
-        opacity: 1;
     }
 }
 
@@ -211,7 +185,6 @@ label {
         transition: .5s;
     }
     input:hover ~.accordion__content {
-        display: flex;
         height: 40rem;
         transition: .5s;
     }
@@ -220,20 +193,21 @@ label {
         transform: rotate(135deg);
     }
     .accordion-item__input:hover ~ .accordion__content {
-        display: flex;
         height: 36rem;
         transition: .5s;
     }
 
-    .accordion-item__input:hover ~ .accordion__content:hover {
-        display: flex;
-        height: 36rem;
-    }
     .accordion-item__input:hover ~ .accordion__content
     >.image {
-        height: 34rem;
+        max-height: 70%;
+        max-width: 70%;
         margin: 0 auto 2rem;
     }
+
+    .sign {
+        opacity: 0;
+    }
+
     .container:hover
     .sign {
         opacity: 1;
